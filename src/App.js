@@ -7,14 +7,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomePage from './components/HomePage';
 import PizzaForm from './components/PizzaForm';
 import ConfirmationPage from './components/HomePage';
+import Nav from "./components/Nav";
+
 
 const App = () => {
   return (
     <>
-      <h1>Primo Pizza Eats</h1>
+     
       <div>
         <Router>
           <Switch>
+            <Route path={"/nav"}>
+              <Nav />
+            </Route>
 
             <Route exact path={"/"}>
               <HomePage />
@@ -30,6 +35,8 @@ const App = () => {
 
           </Switch>
         </Router>  
+
+         
       </div>
     </>
   );
